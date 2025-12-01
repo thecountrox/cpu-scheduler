@@ -20,3 +20,11 @@ For example in a system that requires immediate processing (realtime systems) we
 In other Systems like Big Data Systems we prefer Throughput over Actual Completion times
 
 This repo will contain my implementations of the most common CPU scheduling algorithms.
+
+---
+
+Okay so the following needs to be implemented before I can even think about the algorithms themselves:
+
+- Input functions
+- Standard notations for processes and process list
+- Gnatt Chart Generator

@@ -19,8 +19,27 @@ def print_process_table(process_table: dict[int, int]):
     print("=======================")
 
 
-def generate_gnatt_chart():
-    pass
+def generate_gnatt_chart(sorted_list):
+    """
+    here the list should have
+    (process_name, burst_time)
+
+    """
+    block = "."
+    seperator = "|"
+
+    blockbuf = []
+
+    print("[ ", end="")
+
+    for name, burst in sorted_list:
+        blockbuf = ["." for _ in range(burst + 1)]
+        blockbuf[len(blockbuf) // 2] = name
+        if name != sorted_list[-1][0]:
+            blockbuf.append(seperator)
+        print("".join(blockbuf), end="")
+
+    print(" ]", end="")
 
 
 def sort_by_arrival(process_table: dict[str, list[int]]):
